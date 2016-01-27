@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<constant name="struts.multipart.maxSize" value="30000000" />
+
+	<package name="createPortfolio" namespace="/" extends="struts-default">
+		<action name="uploadImage" class="actions.CreatePortfolioAction">
+			<interceptor-ref name="fileUpload">
+				 <param name="maximumSize">30000000</param>
+				<param name="allowedTypes">
+					image/png,image/gif,image/jpeg,image/pjpeg
+				</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="success">createPortfolio.jsp</result>
+			<result name="error">login.jsp</result>
+			<result name="input">createPortfolio.jsp</result>
+		</action>
+
+	</package>
+
+</struts>

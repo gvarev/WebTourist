@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="editProfile" namespace="/" extends="struts-default">
+		<action name="editProfile" class="actions.EditProfileAction">
+			<result name="success">/userProfile.jsp</result>
+			<result name="input">/userProfile.jsp</result>
+		</action>
+	</package>
+
+</struts>

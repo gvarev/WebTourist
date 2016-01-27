@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="createPortfolioRedirect" namespace="/"
+		extends="struts-default">
+		<action name="createPortfolioRedirect" class="actions.CreatePortfolioRedirect">
+			<result name="success">/createPortfolio.jsp</result>
+		</action>
+	</package>
+
+</struts>
